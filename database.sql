@@ -22,6 +22,7 @@ CREATE TABLE type
 INSERT INTO "pokemon"
     ("name","description","images")
 VALUES
+	('Pumpkaboo', 'Pumpkaboo is a dual-type Ghost/Grass-type Pokémon introduced in Generation VI. It is the counterpart of Phantump. Pumpkaboo evolves into Gourgeist when traded.', 'images/free_pumpkaboo_pokemon_vector_by_emerald_stock_daimm2h-pre.png'),
     ('Charizard', 'Charizard is a dual-type Fire/Flying Pokémon introduced in Generation I. It evolves from Charmeleon starting at level 36. It is the final form of Charmander. Charizard has three other forms.', 'images/charizard.png'),
     ('Pikachu', 'Pikachu are small, mouse-like Pokémon that have short, yellow fur with brown markings covering their backs and parts of their tails. They have black-tipped, pointy ears and red circles on their cheeks, which are said to contain "electrical sacs". Their tails are shaped in the form of a lightning bolt.', 'images/pikachu.png'),
     ('Eevee', 'Eevee is a Normal-type Pokémon introduced in Generation I. It evolves into one of eight different Pokémon through various methods: Eevee evolves into Vaporeon when exposed to a Water Stone. Eevee evolves into Jolteon when exposed to a Thunder Stone.', 'images/eevee.png'),
