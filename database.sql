@@ -41,7 +41,8 @@ VALUES
     ('psychic'),
     ('steel'),
     ('grass'),
-    ('fighting');
+    ('fighting'),
+    ('ghost');
 
 SELECT *
 FROM pokemon;
