@@ -4,16 +4,16 @@ import PokemonListItem from '../PokemonListItem/PokemonListItem';
 
 class PokemonList extends Component {
   render() {
-    //   console.log(this.props.store);
-    //   const pokemonListHtmlArray = this.props.store.pokemonReducer.map(
-    //     (item, index) => {
-    //       return <PokemonListItem pokemon={item} />;
-    //     }
-    //   );
+    console.log(this.props.store);
+    const pokemonListArray = this.props.store.pokemonReducer.map(
+      (item, index) => {
+        return <PokemonListItem pokemon={item} />;
+      }
+    );
 
     return (
       <div>
-        <PokemonListItem />
+        <pokemonListArray />
       </div>
     );
   }
