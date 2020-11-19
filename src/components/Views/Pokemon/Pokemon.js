@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+import './Pokemon.css';
 
 class Pokemon extends Component {
   state = {
@@ -26,12 +27,15 @@ class Pokemon extends Component {
         pokemon: currentPokemon,
       },
       () => {
-        document.title = this.state.pokemon.name;
+        // document.title = this.state.pokemon.name;
         console.log(this.state.pokemon);
       }
     );
   }
-  //Will need back button function
+
+  backClicked = (event) => {
+    this.props.history.push('/');
+  };
 
   render() {
     const typesArray = this.state.pokemon.types
@@ -40,9 +44,14 @@ class Pokemon extends Component {
         })
       : [];
     return (
-      <div>
-        <div>//will need back button</div>
-        <img src={this.state.pokemon.images} />
+      <div className="currentPokemon">
+        <div>
+          <button onClick={this.backClicked}>BACK</button>
+        </div>
+        <img
+          src={this.state.pokemon.images}
+          alt={this.state.pokemon.description}
+        />
         <h1>{this.state.pokemon.name}</h1>
         <h6>Types: {typesArray}</h6>
         <p>{this.state.pokemon.description}</p>
@@ -51,4 +60,6 @@ class Pokemon extends Component {
   }
 }
 
-export default Pokemon;
+const mapStoreToProps = (store) => ({ store });
+
+export default connect(mapStoreToProps)(Pokemon);

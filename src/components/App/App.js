@@ -18,7 +18,6 @@ class App extends Component {
     return (
       <div className="App">
         <h1>Pokemon!</h1>
-        <PokemonList />
         <Router>
           <Route exact path="/" component={Home} />
           <Route path="/pokemon/:id" component={Pokemon} />

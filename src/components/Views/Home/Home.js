@@ -5,6 +5,9 @@ class Home extends Component {
   componentDidMount() {
     document.title = 'Pokemon Home';
   }
+  clickPokemon = (id) => (event) => {
+    this.props.history.push(`pokemon/${id}`);
+  };
 
   render() {
     return (
