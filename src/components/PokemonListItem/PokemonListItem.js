@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import './PokemonListItem.css';
+// import './PokemonListItem.css';
 
 class PokemonListItem extends Component {
   render() {

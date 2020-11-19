@@ -16,9 +16,10 @@ router.get('/', (req, res) => {
       res.sendStatus(500);
     });
 });
+//GET POKEMON TYPES
 
 //GET POKEMON WITH TYPES
-router.get('/poketypes', (req, res) => {
+router.get('/full', (req, res) => {
   const queryText = `SELECT "pokemon".id, "pokemon".name, "pokemon".description, "pokemon".images, ARRAY_AGG("type".description) as types FROM "pokemon"
         JOIN pokemon_type ON "pokemon".id="pokemon_type".pokemon_id
         JOIN type ON "pokemon_type".type_id="type".id

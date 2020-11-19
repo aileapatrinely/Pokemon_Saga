@@ -4,6 +4,10 @@ import { connect } from 'react-redux';
 import { HashRouter as Router, Route, Link } from 'react-router-dom';
 import { withRouter } from 'react-router-dom';
 
+//components
+import Home from '../Views/Home/Home';
+import Pokemon from '../Views/Pokemon/Pokemon';
+
 class App extends Component {
   componentDidMount() {
     this.props.dispatch({ type: 'GET_POKEMON' });
@@ -13,10 +17,10 @@ class App extends Component {
     return (
       <div className="App">
         <h1>Pokemon!</h1>
-        {/* <Router>
+        <Router>
           <Route exact path="/" component={Home} />
           <Route path="/pokemon/:id" component={Pokemon} />
-        </Router> */}
+        </Router>
       </div>
     );
   }
