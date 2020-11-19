@@ -5,7 +5,7 @@ const pool = require('../modules/pool');
 
 //GET ALL POKEMON
 router.get('/', (req, res) => {
-  const queryText = `SELECT * FROM 'pokemon';`;
+  const queryText = `SELECT * FROM "pokemon";`;
   pool
     .query(queryText)
     .then((response) => {
@@ -31,7 +31,7 @@ router.get('/full', (req, res) => {
       res.send(response.rows);
     })
     .catch((err) => {
-      console.log('Error in poketypes GET', err);
+      console.log('Error in Full GET', err);
       res.sendStatus(500);
     });
 });
