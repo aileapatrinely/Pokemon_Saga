@@ -7,6 +7,7 @@ import { withRouter } from 'react-router-dom';
 //components
 import Home from '../Views/Home/Home';
 import Pokemon from '../Views/Pokemon/Pokemon';
+import PokemonList from '../PokemonList/PokemonList';
 
 class App extends Component {
   componentDidMount() {
@@ -17,6 +18,7 @@ class App extends Component {
     return (
       <div className="App">
         <h1>Pokemon!</h1>
+        <PokemonList />
         <Router>
           <Route exact path="/" component={Home} />
           <Route path="/pokemon/:id" component={Pokemon} />
