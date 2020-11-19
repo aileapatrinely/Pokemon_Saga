@@ -17,7 +17,7 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <h1>Pokemon!</h1>
+        <img src="images/PokemonLogo.png" alt="Pokemon logo" />
         <Router>
           <Route exact path="/" component={Home} />
           <Route path="/pokemon/:id" component={Pokemon} />
